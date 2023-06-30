@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(307deg, rgba(249, 41, 244, 0.5215336134453781) 0%, rgba(0, 212, 255, 0.31425070028011204) 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.registration__form {
+    margin: 1.5rem auto;
+    padding: 1rem;
+    border: solid rgb(67, 82, 247) 1px;
+    border-radius: 6px;
+    max-width: 600px;
+    background-color: rgb(254, 254, 254);
+    box-shadow: 12px 12px 2px 1px rgba(158, 6, 188, 0.105);
+}
+
+.header {
+    text-align: center;
+    color: rgb(67, 82, 247);
+}
+
+input,
+select {
+    padding: 0.5rem;
+    border: 1px rgb(7, 190, 241) solid;
+    border-radius: 6px;
+}
+
+.input {
+    margin: 0.5rem;
+}
+
+.submit {
+    padding: 0.5rem 0.8rem;
+}
