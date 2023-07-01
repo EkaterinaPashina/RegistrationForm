@@ -25,6 +25,8 @@ const age = document.getElementById('age');
 function checkAge() {
     if (age.value.length === 0) {
         document.getElementById("age-error").innerText = "Введите ваш возраст.";
+    } else if (age.value > 100) {
+        document.getElementById("age-error").innerText = "Вы указали слишком большой возраст.";
     }
 };
 
