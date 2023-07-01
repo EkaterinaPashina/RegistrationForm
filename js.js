@@ -49,10 +49,11 @@ form.addEventListener('submit', function (event) {
     checkCheckbox();
     checkSelect();
     checkAge();
-    checkPasswords();
+
     for (let input of inputs) {
         let inputId = input.id;
         document.getElementById(`${inputId}-error`).innerText = input.validationMessage;
         console.log(input.value);
     }
+    checkPasswords();
 });
