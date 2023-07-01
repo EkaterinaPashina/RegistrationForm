@@ -39,17 +39,18 @@ function checkPasswords() {
     }
 }
 
-let inputs = document.querySelectorAll("input");
+let inputs = document.querySelectorAll(".errored-message");
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
+
     checkCheckbox();
     checkSelect();
     checkAge();
     checkPasswords();
-
     for (let input of inputs) {
         let inputId = input.id;
         document.getElementById(`${inputId}-error`).innerText = input.validationMessage;
+        console.log(input.value);
     }
 });

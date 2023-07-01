@@ -13,12 +13,13 @@
         <h1 class="header">Форма регистрации</h1>
         <form action="#" name="user" class="form" novalidate>
             <label for="name" class="nameLabel ">*Имя:</label>
-            <input type="text" id="name" name="name" class="name input" placeholder="Введите ваше имя" minlength="2"
-                maxlength="20" required>
+            <input type="text" id="name" name="name" class="name input errored-message" placeholder="Введите ваше имя"
+                minlength="2" maxlength="20" required>
             <span class="error-message error" id="name-error"></span>
 
             <label for="mail" class="mailLabel ">*Email:</label>
-            <input type="email" id="mail" name="mail" class="mail input" placeholder="xxx@xxxx.xxx" required>
+            <input type="email" id="mail" name="mail" class="mail input errored-message" placeholder="xxx@xxxx.xxx"
+                required>
             <span class="error-message error" id="mail-error"></span>
 
             <label for="age" class="ageLabel">Возраст:</label>
@@ -29,10 +30,8 @@
             <label for="sex" class="sexLabel">Ваш пол:</label><br>
             <input type="radio" name="sex" id="man" value="man" class="sex input">
             <label for="man">Мужчина</label>
-            <span class="error-message error" id="man-error"></span>
             <input type="radio" name="sex" id="woman" value="woman" class="sex input">
             <label for="woman">Женщина</label>
-            <span class="error-message error" id="woman-error"></span>
             <span class="error-message error" id="sex-error"></span>
 
             <label for="profession" class="professionLabel">*Ваша профессия:</label>
@@ -48,19 +47,20 @@
             <span class="error-message error" id="profession-error"></span>
 
             <label for="password" class="passwordLabel">*Пароль:</label>
-            <input type="password" id="password" class="password input" placeholder="Введите ваш пароль" minlength="8"
-                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
+            <input type="password" id="password" class="password input errored-message" placeholder="Введите ваш пароль"
+                minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
             <p class="help">Пароль должен содержать заглавную букву, строчную букву, цифру и быть длиннее 8 знаков.</p>
             <span class="error-message error" id="password-error"></span>
 
 
             <label for="passwordRepeat" class="passwordRepeatLabel">*Повторите пароль:</label>
-            <input type="password" id="passwordRepeat" class="passwordRepeat input" placeholder="Повторите ваш пароль"
-                minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
+            <input type="password" id="passwordRepeat" class="passwordRepeat input errored-message"
+                placeholder="Повторите ваш пароль" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                required>
             <span class="error-message error" id="passwordRepeat-error"></span>
 
             <label for="checkbox">*Согласие на обработку данных</label>
-            <input type="checkbox" id="checkbox" name="checkbox" class="checkbox input" required>
+            <input type="checkbox" id="checkbox" name="checkbox" class="checkbox input errored-message" required>
             <span class="error-message error" id="checkbox-error"></span>
 
             <input type="submit" name="submit" value="Отправить" class="submit input">
