@@ -12,28 +12,30 @@
     <section class="registration__form">
         <h1 class="header">Форма регистрации</h1>
         <form action="#" name="user" class="form" novalidate>
-            <label for="name" class="nameLabel ">Имя:</label>
+            <label for="name" class="nameLabel ">*Имя:</label>
             <input type="text" id="name" name="name" class="name input" placeholder="Введите ваше имя" minlength="2"
                 maxlength="20" required>
-            <br>
+            <span class="error-message error" id="name-error"></span>
 
-            <label for="mail" class="mailLabel ">Email:</label>
+            <label for="mail" class="mailLabel ">*Email:</label>
             <input type="email" id="mail" name="mail" class="mail input" placeholder="xxx@xxxx.xxx" required>
-            <br>
+            <span class="error-message error" id="mail-error"></span>
 
             <label for="age" class="ageLabel">Возраст:</label>
             <input type="number" id="age" name="age" class="age input" placeholder="Введите ваш возраст" min="1"
                 max="100">
-            <br>
+            <span class="error-message error" id="age-error"></span>
 
             <label for="sex" class="sexLabel">Ваш пол:</label>
             <input type="radio" name="sex" id="man" value="man" class="sex input">
             <label for="man">Мужчина</label>
+            <span class="error-message error" id="man-error"></span>
             <input type="radio" name="sex" id="woman" value="woman" class="sex input">
             <label for="woman">Женщина</label>
-            <br>
+            <span class="error-message error" id="woman-error"></span>
+            <!--<span class="error-message error" id="sex-error"></span>-->
 
-            <label for="profession" class="professionLabel">Ваша профессия:</label>
+            <label for="profession" class="professionLabel">*Ваша профессия:</label>
             <select id="profession" name="profession" class="profession" placeholder="Выберете вашу профессию" required>
                 <option value="" disabled selected>Выберите из списка</option>
                 <option value="opt1">Дизайнер</option>
@@ -43,23 +45,24 @@
                 <option value="opt5">Архитектор</option>
                 <option value="opt6">Другое</option>
             </select>
-            <br>
+            <span class="error-message error" id="profession-error"></span>
 
-            <label for="passwordLabel">Пароль:</label>
+            <label for="passwordLabel">*Пароль:</label>
             <input type="password" id="password" class="password input" placeholder="Введите ваш пароль" minlength="8"
-                pattern="^(?=.*[AZ])(?=.*[az])(?=.*[0-9])$" required>
-            <br>
+                pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8}$/" required>
+            <span class="error-message error" id="password-error"></span>
 
-            <label for="passwordRepeatLabel">Повторите пароль:</label>
+            <label for="passwordRepeatLabel">*Повторите пароль:</label>
             <input type="password" id="passwordRepeat" class="passwordRepeat input" placeholder="Введите ваш пароль"
-                minlength="8" pattern="^(?=.*[AZ])(?=.*[az])(?=.*[0-9])$" required>
-            <br>
+                minlength="8" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8}$/"
+                required>
+            <span class="error-message error" id="passwordRepeat-error"></span>
 
-            <label for="checkbox">Согласие на обработку данных</label>
+            <label for="checkbox">*Согласие на обработку данных</label>
             <input type="checkbox" id="checkbox" name="checkbox" class="checkbox input" required>
-            <br>
+            <span class="error-message error" id="checkbox-error"></span>
 
-            <input type="submit" name="submit" value="Отправить" class="submit input" />
+            <input type="submit" name="submit" value="Отправить" class="submit input">
         </form>
     </section>
 
