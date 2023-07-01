@@ -25,10 +25,16 @@ select {
     padding: 0.5rem;
     border: 1px rgb(7, 190, 241) solid;
     border-radius: 6px;
+    margin: 0.5rem;
 }
 
 .input {
-    margin: 0.5rem;
+    width: 10rem;
+}
+
+.sex,
+#checkbox {
+    width: 1rem;
 }
 
 .submit {
@@ -41,4 +47,11 @@ span {
 
 .error {
     color: rgb(252, 1, 1);
+}
+
+.help {
+    color: rgb(143, 143, 143);
+    margin: 0;
+    font-size: 0.8rem;
+    border-bottom: 1px dotted rgb(206, 203, 203);
 }

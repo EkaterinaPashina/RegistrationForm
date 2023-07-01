@@ -26,14 +26,14 @@
                 max="100">
             <span class="error-message error" id="age-error"></span>
 
-            <label for="sex" class="sexLabel">Ваш пол:</label>
+            <label for="sex" class="sexLabel">Ваш пол:</label><br>
             <input type="radio" name="sex" id="man" value="man" class="sex input">
             <label for="man">Мужчина</label>
             <span class="error-message error" id="man-error"></span>
             <input type="radio" name="sex" id="woman" value="woman" class="sex input">
             <label for="woman">Женщина</label>
             <span class="error-message error" id="woman-error"></span>
-            <!--<span class="error-message error" id="sex-error"></span>-->
+            <span class="error-message error" id="sex-error"></span>
 
             <label for="profession" class="professionLabel">*Ваша профессия:</label>
             <select id="profession" name="profession" class="profession" placeholder="Выберете вашу профессию" required>
@@ -47,15 +47,16 @@
             </select>
             <span class="error-message error" id="profession-error"></span>
 
-            <label for="passwordLabel">*Пароль:</label>
+            <label for="password" class="passwordLabel">*Пароль:</label>
             <input type="password" id="password" class="password input" placeholder="Введите ваш пароль" minlength="8"
-                pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8}$/" required>
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
+            <p class="help">Пароль должен содержать заглавную букву, строчную букву, цифру и быть длиннее 8 знаков.</p>
             <span class="error-message error" id="password-error"></span>
 
-            <label for="passwordRepeatLabel">*Повторите пароль:</label>
-            <input type="password" id="passwordRepeat" class="passwordRepeat input" placeholder="Введите ваш пароль"
-                minlength="8" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8}$/"
-                required>
+
+            <label for="passwordRepeat" class="passwordRepeatLabel">*Повторите пароль:</label>
+            <input type="password" id="passwordRepeat" class="passwordRepeat input" placeholder="Повторите ваш пароль"
+                minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
             <span class="error-message error" id="passwordRepeat-error"></span>
 
             <label for="checkbox">*Согласие на обработку данных</label>

@@ -1,16 +1,55 @@
 const form = document.forms.user;
+
+function checkCheckbox() {
+    const manCB = document.getElementById("man");
+    const womanCB = document.getElementById("woman");
+    if (!manCB.checked && !womanCB.checked) {
+        document.getElementById("sex-error").innerText = "Выберите ваш пол.";
+    } else {
+        console.log(user[3].value);
+    }
+};
+
+const select = document.querySelector('select');
+
+function checkSelect() {
+    if (select.value === "") {
+        document.getElementById("profession-error").innerText = "Выберите вашу профессию.";
+    } else {
+        console.log(select.value);
+    }
+};
+
+const age = document.getElementById('age');
+
+function checkAge() {
+    if (age.value.length === 0) {
+        document.getElementById("age-error").innerText = "Введите ваш возраст.";
+    }
+};
+
+const password = document.getElementById('password');
+const passwordRepeat = document.getElementById('passwordRepeat');
+
+function checkPasswords() {
+    if (password.value === passwordRepeat.value) {
+        console.log(password.value);
+    } else {
+        document.getElementById("passwordRepeat-error").innerText = "Пароли не совпадают.";
+    }
+}
+
 let inputs = document.querySelectorAll("input");
-let selects = document.querySelectorAll("select");
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    for (let input of inputs) {
-        let inputid = input.id;
-        document.getElementById(`${inputid}-error`).innerText = input.validationMessage;
-    }
-    for (select of selects) {
-        let selectid = select.id;
-        document.getElementById(`${selectid}-error`).innerText = select.validationMessage;
-    }
+    checkCheckbox();
+    checkSelect();
+    checkAge();
+    checkPasswords();
 
+    for (let input of inputs) {
+        let inputId = input.id;
+        document.getElementById(`${inputId}-error`).innerText = input.validationMessage;
+    }
 });
