@@ -12,57 +12,68 @@
     <section class="registration__form">
         <h1 class="header">Форма регистрации</h1>
         <form action="#" name="user" class="form" novalidate>
-            <label for="name" class="nameLabel ">*Имя:</label>
-            <input type="text" id="name" name="name" class="name input errored-message" placeholder="Введите ваше имя"
-                minlength="2" maxlength="20" required>
-            <span class="error-message error" id="name-error"></span>
-
-            <label for="mail" class="mailLabel ">*Email:</label>
-            <input type="email" id="mail" name="mail" class="mail input errored-message" placeholder="xxx@xxxx.xxx"
-                required>
-            <span class="error-message error" id="mail-error"></span>
-
-            <label for="age" class="ageLabel">Возраст:</label>
-            <input type="number" id="age" name="age" class="age input" placeholder="Введите ваш возраст" min="1"
-                max="100">
-            <span class="error-message error" id="age-error"></span>
-
-            <label for="sex" class="sexLabel">Ваш пол:</label><br>
-            <input type="radio" name="sex" id="man" value="man" class="sex input">
-            <label for="man">Мужчина</label>
-            <input type="radio" name="sex" id="woman" value="woman" class="sex input">
-            <label for="woman">Женщина</label>
-            <span class="error-message error" id="sex-error"></span>
-
-            <label for="profession" class="professionLabel">*Ваша профессия:</label>
-            <select id="profession" name="profession" class="profession" placeholder="Выберете вашу профессию" required>
-                <option value="" disabled selected>Выберите из списка</option>
-                <option value="opt1">Дизайнер</option>
-                <option value="opt2">Иллюстратор</option>
-                <option value="opt3">Разработчик</option>
-                <option value="opt4">Художник</option>
-                <option value="opt5">Архитектор</option>
-                <option value="opt6">Другое</option>
-            </select>
-            <span class="error-message error" id="profession-error"></span>
-
-            <label for="password" class="passwordLabel">*Пароль:</label>
-            <input type="password" id="password" class="password input errored-message" placeholder="Введите ваш пароль"
-                minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
-            <p class="help">Пароль должен содержать заглавную букву, строчную букву, цифру и быть длиннее 8 знаков.</p>
-            <span class="error-message error" id="password-error"></span>
-
-
-            <label for="passwordRepeat" class="passwordRepeatLabel">*Повторите пароль:</label>
-            <input type="password" id="passwordRepeat" class="passwordRepeat input errored-message"
-                placeholder="Повторите ваш пароль" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
-                required>
-            <span class="error-message error" id="passwordRepeat-error"></span>
-
-            <label for="checkbox">*Согласие на обработку данных</label>
-            <input type="checkbox" id="checkbox" name="checkbox" class="checkbox input errored-message" required>
-            <span class="error-message error" id="checkbox-error"></span>
-
+            <div class="namediv">
+                <label for="name" class="nameLabel ">*Имя:</label>
+                <input type="text" id="name" name="name" class="name input errored-message"
+                    placeholder="Введите ваше имя" minlength="2" maxlength="20" required autocomplete="off">
+                <span class="error-message error" id="name-error"></span>
+            </div>
+            <div class="maildiv">
+                <label for="email" class="emailLabel ">*Email:</label>
+                <input type="email" id="email" name="email" class="mail input errored-message"
+                    placeholder="Введите ваш email" required>
+                <p class="help">Email вводится в формате: qwerty@mail.ru</p>
+                <span class="error-message error" id="email-error"></span>
+            </div>
+            <div class="agediv">
+                <label for="age" class="ageLabel">Возраст:</label>
+                <input type="number" id="age" name="age" class="age input" placeholder="Введите ваш возраст" min="1"
+                    max="100" required>
+                <span class="error-message error" id="age-error"></span>
+            </div>
+            <div class="sexdiv">
+                <h2>Ваш пол:</h2>
+                <input type="radio" name="sex" id="man" value="man" class="sex input">
+                <label for="man">Мужчина</label>
+                <input type="radio" name="sex" id="woman" value="woman" class="sex input">
+                <label for="woman">Женщина</label>
+                <span class="error-message error" id="sex-error"></span>
+            </div>
+            <div class="professiondiv">
+                <label for="profession" class="professionLabel">*Ваша профессия:</label>
+                <select id="profession" name="profession" class="profession" placeholder="Выберете вашу профессию"
+                    required>
+                    <option value="" hidden>Выберите из списка</option>
+                    <option value="opt1">Дизайнер</option>
+                    <option value="opt2">Иллюстратор</option>
+                    <option value="opt3">Разработчик</option>
+                    <option value="opt4">Художник</option>
+                    <option value="opt5">Архитектор</option>
+                    <option value="opt6">Другое</option>
+                </select>
+                <span class="error-message error" id="profession-error"></span>
+            </div>
+            <div class="passworddiv">
+                <label for="password" class="passwordLabel">*Пароль:</label>
+                <input type="password" id="password" class="password input errored-message"
+                    placeholder="Введите ваш пароль" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                    required>
+                <p class="help">Пароль должен содержать заглавную букву, строчную букву, цифру и быть длиннее 8 знаков.
+                </p>
+                <span class="error-message error" id="password-error"></span>
+            </div>
+            <div class="passwordrepeatdiv">
+                <label for="passwordRepeat" class="passwordRepeatLabel">*Повторите пароль:</label>
+                <input type="password" id="passwordRepeat" class="passwordRepeat input errored-message"
+                    placeholder="Повторите ваш пароль" minlength="8"
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
+                <span class="error-message error" id="passwordRepeat-error"></span>
+            </div>
+            <div class="checkboxdiv">
+                <label for="checkbox">*Согласие на обработку данных</label>
+                <input type="checkbox" id="checkbox" name="checkbox" class="checkbox input errored-message" required>
+                <span class="error-message error" id="checkbox-error"></span>
+            </div>
             <input type="submit" name="submit" value="Отправить" class="submit input">
         </form>
     </section>
